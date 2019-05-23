@@ -7,24 +7,43 @@ import math
 from variables import*
 
 font_name = pygame.font.match_font("arial")
+
 TITLE = "tank game"
+
 vec = pygame.math.Vector2
+
 PLAYER_ACC = 0.5
+
 PLAYER_FRIC = -0.12
+
 M = 1
+
 WID = 900
+
 HEI = 900
+
 FPS = 60
+
 SPEED = 10
+
 x = WID/2
+
 MOB_ACC = 0.5
+
 MOB_FRIC = -0.08
+
 BULLET_SPEED = 10
+
 score = 0
+
 POWER_UP_ACC = 0.2
+
 POWER_UP_FRIC = -0.12
+
 game_ower = True
+
 spred = 3
+
 shoot_delay = 250
 
 
