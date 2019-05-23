@@ -48,7 +48,8 @@ shoot_delay = 250
 
 
 def draw_text(surf, text, size, x, y):
-    font = pg.font.Font(font_name, size)
+
+    font = pg.font.Font(font_name, size)  
     text_surface = font.render(text, True, (0, 255, 255))
     text_rect = text_surface.get_rect()
     text_rect.midtop = (x, y)
@@ -67,6 +68,7 @@ def draw_shild_bar(surf, x, y, pct):
 
 
 class Player(pg.sprite.Sprite):
+
     def __init__(self):
         pg.sprite.Sprite.__init__(self)
         self.image = pg.Surface((30, 30))
@@ -154,6 +156,7 @@ class Player(pg.sprite.Sprite):
 
 
 class Bullet1(pg.sprite.Sprite):
+
     def __init__(self, x, y, x2, y2):
         pg.sprite.Sprite.__init__(self)
         self.image = pg.Surface((10, 10))
@@ -186,6 +189,7 @@ class Bullet1(pg.sprite.Sprite):
 
 
 class Bullet2(pg.sprite.Sprite):
+
     def __init__(self, x, y):
         pg.sprite.Sprite.__init__(self)
         self.image = pg.Surface((10, 10))
@@ -203,6 +207,7 @@ class Bullet2(pg.sprite.Sprite):
 
 
 class Bullet3(pg.sprite.Sprite):
+
     def __init__(self, x, y):
         pg.sprite.Sprite.__init__(self)
         self.image = pg.Surface((10, 10))
@@ -219,6 +224,7 @@ class Bullet3(pg.sprite.Sprite):
 
 
 class Bullet4(pg.sprite.Sprite):
+
     def __init__(self, x, y):
         pg.sprite.Sprite.__init__(self)
         self.image = pg.Surface((10, 10))
@@ -235,6 +241,7 @@ class Bullet4(pg.sprite.Sprite):
 
 
 class Mob(pg.sprite.Sprite):
+
     def __init__(self):
         pygame.sprite.Sprite.__init__(self)
         self.image_orig = pg.Surface((40, 40))
@@ -272,6 +279,7 @@ class Mob(pg.sprite.Sprite):
 
 
 class power_up(pg.sprite.Sprite):
+
     def __init__(self):
         pygame.sprite.Sprite.__init__(self)
         self.image_orig = pg.Surface((40, 40))
@@ -308,6 +316,7 @@ class power_up(pg.sprite.Sprite):
 
 
 class Game:
+
     def __init__(self):
         # initialize game window
         pg.init()
@@ -442,8 +451,12 @@ class Game:
 
 
 g = Game()
+
 g.show_start_screen()
+
 while g.running:
+
     g.new()
     g.show_go_screen()
+    
 pg.quit()
